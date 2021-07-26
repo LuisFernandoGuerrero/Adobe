@@ -1,0 +1,90 @@
+.header {
+    background-image: url('/build/img/headerImage.webp');
+    height: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+}
+
+.shadow {
+    height: auto;
+    position: absolute;
+    background-color: rgba($negro, 0.7);
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 5.5rem;
+
+}
+
+.sign {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    color: $blanco;
+    img {
+        padding-right: 2rem;
+        width: 8rem;
+        @include tablet {
+            width: 10rem;
+        }
+    }
+
+    p {
+        font-weight: bold;
+        font-size: 3.4rem;
+        @include tablet {
+            font-size: 4.2rem;
+        }
+    }
+}
+
+.title {
+    position: relative;
+    z-index: 10;
+    color: $blanco;
+}
+
+.principal {
+    text-align: start;
+    width: 38rem;
+    font-size: 5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    position: relative;
+    padding-bottom: 5rem;
+    color: $blanco;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 2.4rem;
+        height: .4rem;  
+        background-color: currentColor;
+        bottom: 0;
+        left: 0;
+    }
+
+    @include tablet {
+        font-size: 8rem;
+        width: 70rem;
+    }
+}
+
+.presentation {
+    width: 35rem;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.4;
+
+    @include tablet {
+    width: 70rem;
+
+    }
+}

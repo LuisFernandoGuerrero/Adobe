@@ -1,0 +1,106 @@
+.integration {
+    height: auto;
+    background-color: $lila;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.all {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3.2rem;
+    line-height: 1.2;
+    width: 35rem;
+    @include tablet {
+        width: 65rem;
+    }
+    @include desktop {
+        width: 100rem;
+    }
+}
+
+.cards {
+    margin-top: 10rem;
+    @include tablet {
+        @include grid(2, 0);
+        row-gap: 5rem;
+    }
+    @include desktop {
+        row-gap: 0rem;
+        @include grid(4, 0);
+    }
+
+}
+
+.card {
+    background-color: $blanco;
+    padding: 0;
+    width: 30.1rem;
+    border-radius: 2rem;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+
+    @include tablet {
+        margin: 0 auto;
+    }
+}
+
+.infoCard {
+    background-color: #F7F7F7;
+    padding: 1rem 3rem;
+    border-radius: 0 0 2rem 2rem;
+    height: 70%;
+}
+
+.titleCard {
+    font-size: 2.4rem;
+    margin-top: 1rem;
+}
+
+.descriptionCard {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-top: 0.5rem;
+}
+
+.logotipe {
+    display: flex;
+    align-items: center;
+    margin: 1rem 3rem;
+
+    img {
+        width: 5rem;
+        height: 5rem;
+        margin-right: 1.5rem;
+    }
+    p {
+        font-size: 2.4rem;
+        color: currentColor;
+    }
+}
+.boton {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+}
+.buttom {
+    display: inline-block;
+    background-color: $azul;
+    padding: 1.4rem 5rem;
+    border-radius: 6rem;
+    color: $blanco;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: center;
+    
+    &:hover {
+        background-color: darken($azul, 5);
+        transition: background-color 0.3s linear;
+    }
+
+    @include tablet {
+        padding: 2rem 8rem;
+        font-size: 3rem;
+
+    }
+}

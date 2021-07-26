@@ -1,0 +1,175 @@
+.information {
+    padding-top: 10rem;
+    position: relative;
+    padding-bottom: 20rem;
+    &::before {
+        content: '';
+        background-color: rgba($negro, 0.4);
+        width: 100%;
+        height: 0.3rem;
+        position: absolute;
+        bottom: 0;
+        left: 0rem;
+        right: 0rem;
+        @include desktop {
+            bottom: 0;
+            left: 27rem;
+            right: 0;
+            width: 60%;
+        }
+    }
+}
+
+.item, .itemSec {
+    margin: 0 auto;
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    @include desktop {
+        @include grid(2, 0);
+    }
+
+.infoItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include desktop {
+        align-items: flex-end;
+    }
+}
+
+.titleItem {
+    color: $morado;
+    font-size: 3.3rem;
+    line-height: 1;
+    font-weight: bold;
+    margin-bottom: 0;
+    width: 35rem;
+    @include tablet {
+        width: 70rem;
+    }
+    @include desktop {
+        width: 45rem;
+    }
+}
+
+.descItem {
+    font-size: 2.2rem;
+    line-height: 1;
+    font-weight: bold;
+    margin-bottom: 0;
+    width: 35rem;
+    @include tablet {
+        width: 70rem;
+    }
+    @include desktop {
+        width: 45rem;
+    }
+}
+
+.presentationItem {
+    line-height: 1.5;
+    color: $negro;
+    width: 35rem;
+    @include tablet {
+        width: 70rem;
+    }
+    @include desktop {
+        color: rgba($negro, 0.6);
+        width: 45rem;
+    }
+}
+
+.imageItem {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    img {
+        width: 20rem;
+        max-width: 20rem;
+        position: absolute;
+        z-index: 5;
+
+        opacity: 0;
+        @include tablet {
+            right: 20rem;
+            top: -25rem;
+            right: 20rem;
+            opacity: 0.4;
+        }
+        @include desktop {
+            width: 35rem;
+            opacity: 1;
+            top: 3rem;
+            left: -1rem;
+            max-width: 35rem;
+        }
+    }
+}
+
+.imgShadow {
+    width: 30rem;
+    height: 30rem;
+    position: absolute;
+    bottom: -5rem;
+    border-radius: 80%;
+    background: linear-gradient(180deg, rgba(188,166,215,0.2) 50%, rgba(83,71,192,0.2) 100%);
+    left: -10rem;
+
+    @include tablet {
+        left: -15rem;
+    }
+    @include desktop {
+        width: 40rem;
+        height: 40rem;
+        background: linear-gradient(180deg, rgba(188,166,215,1) 50%, rgba(83,71,192,1) 100%);
+        left: -5rem;
+        bottom: -4rem;
+        right: 0;
+    }
+}
+}
+
+
+.itemSec {
+    .infoItem {
+        align-items: center;
+        @include desktop {
+            align-items: flex-start;
+        }
+    }
+    .imgShadow {
+        left: -8rem;
+        bottom: -45rem;
+        @include tablet {
+        left: 20rem;
+        }
+        @include desktop {
+            left: 3rem;
+            bottom: -4rem;
+            right: 0;
+        }
+    }
+    .imageItem {
+        img {
+        position: absolute;
+        width: 30rem;
+        top: 15rem;
+        left: 0;
+        @include tablet {
+            left: 15rem;
+        }
+        @include desktop {
+            width: 46rem;
+            top: 0;
+            left: 7rem;
+        }
+        }
+    }
+}
+
+.ciber {
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: -5rem;
+}
